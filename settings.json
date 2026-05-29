@@ -1,0 +1,14 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontSize": 12,
+  "terminal.integrated.fontSize": 12,
+  "workbench.statusBar.visible": false,
+  "editor.minimap.enabled": false,
+  "workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "bottom",
+
+  "vscode_custom_css.imports": [
+    "file:///home/kienpham07/custom-vscode.css"
+  ]
+}
