@@ -1,0 +1,112 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "preview_tabs": {
+    "enabled": false
+  },
+  "context_servers": {
+    "mcp-server-figma": {
+      "enabled": true,
+      "remote": false,
+      "settings": {
+        "figma_api_key": "YOUR_FIGMA_ACCESS_TOKEN",
+      },
+    },
+  },
+  "autosave": "off",
+  "ensure_final_newline_on_save": false,
+  "remove_trailing_whitespace_on_save": false,
+  "cli_default_open_behavior": "existing_window",
+  "text_rendering_mode": "platform_default",
+  "terminal": {
+    "font_size": 15.0,
+  },
+  "buffer_font_family": "JetBrains Mono",
+  "project_panel": {
+    "dock": "right",
+    "default_width": 400,
+    "auto_fold_dirs": false,
+    "sticky_scroll": false,
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "agent": {
+    "dock": "right",
+    "sidebar_side": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "ui_font_size": 18.5,
+  "icon_theme": {
+    "mode": "light",
+    "light": "Flow Dim",
+    "dark": "Material Icon Theme",
+  },
+  "telemetry": {
+    "diagnostics": true,
+    "metrics": false,
+  },
+  "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "reasoning_effort": "xhigh",
+      },
+      "type": "registry",
+    },
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "buffer_font_size": 15.0,
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha",
+  },
+  "tabs": { "file_icons": true },
+  "current_line_highlight": "all",
+  "languages": {
+    "Go": {
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "goimports",
+          "arguments": [],
+        },
+      },
+    },
+  },
+  "title_bar": {
+    "show_onboarding_banner": false,
+    "show_project_items": false,
+    "show_branch_name": false,
+  },
+  "tab_bar": {
+    "show": true,
+  },
+  "toolbar": {
+    "quick_actions": false,
+  },
+  "status_bar": {
+    "experimental.show": false,
+  },
+  "outline_panel": {
+    "dock": "left",
+    "indent_guides": {
+      "show": "never",
+    },
+  },
+  "file_finder": {
+    "modal_max_width": "large",
+  },
+  "gutter": {
+    "min_line_number_digits": 0,
+  },
+}

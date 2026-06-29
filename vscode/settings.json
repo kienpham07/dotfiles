@@ -1,5 +1,5 @@
 {
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "flow-dim",
   "terminal.integrated.fontSize": 13,
   "workbench.statusBar.visible": false,
   "editor.minimap.enabled": false,
@@ -87,5 +87,6 @@
   "editor.inlineSuggest.enabled": false,
   "editor.fontSize": 13,
   "window.zoomLevel": 0.5,
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Dark Modern",
+  "flow-icons.licenseKey": "FLOW-ENQI89-2BPK0E-5RYF7S-O0PNQR",
 }
