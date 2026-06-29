@@ -1,7 +1,6 @@
 {
   "workbench.iconTheme": "flow-dim",
   "terminal.integrated.fontSize": 13,
-  "workbench.statusBar.visible": false,
   "editor.minimap.enabled": false,
   "workbench.activityBar.location": "bottom",
   "vscode_custom_css.imports": [
@@ -64,13 +63,15 @@
     "sml": "cd $dir && sml $fileName",
   },
   "code-runner.clearPreviousOutput": true,
-  "files.autoSave": "onFocusChange",
+  "files.autoSave": "off",
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.formatOnType": false,
   "code-runner.runInTerminal": true,
   "editor.mouseWheelZoom": true,
   "editor.overtypeCursorStyle": "line",
   "terminal.integrated.cursorStyle": "line",
   "editor.wordWrap": "on",
-  "editor.formatOnSave": true,
   "[go]": {
     "editor.defaultFormatter": "golang.go",
     "editor.formatOnSave": true,
@@ -80,13 +81,68 @@
   },
   "editor.linkedEditing": true,
   "editor.fontLigatures": true,
-  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', monospace",
+  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', 'Droid Sans Mono', monospace",
   "errorLens.excludeBySource": [
     "cSpell"
   ],
   "editor.inlineSuggest.enabled": false,
   "editor.fontSize": 13,
   "window.zoomLevel": 0.5,
-  "workbench.colorTheme": "Dark Modern",
   "flow-icons.licenseKey": "FLOW-ENQI89-2BPK0E-5RYF7S-O0PNQR",
+  "workbench.colorTheme": "Dark Modern",
+  "editor.stickyScroll.enabled": false,
+
+  // VIM MODE
+  "keyboard.dispatch": "keyCode",
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<Space>",
+  "vim.normalModeKeyBindingsNonRecursive": [
+    // Unlock normal mode
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>", "l"]
+    },
+    // NAVIGATION
+    // switch b/w buffers
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // Switch between panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+
+    // Additional 
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+
+    { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] }, // Opens VS Code's Quick Open dialog, allowing you to search and open files quickly by typing part of the file name.
+
+    { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] }, // Formats the entire current document using the configured
+    
+    {
+      "before": ["g", "h"], 
+      "commands": ["editor.action.showDefinitionPreviewHover"] // Shows a preview popup containing the definition
+    }
+  
+  ],
+  "workbench.statusBar.visible": false
 }

@@ -1,0 +1,110 @@
+// Place your key bindings in this file to override the defaults
+[
+    // ============================
+    // TAB BEHAVIOR
+    // ============================
+
+    {
+        // Pressing Tab inserts a tab character (or indentation)
+        "key": "tab",
+        "command": "tab",
+        "when": "editorTextFocus && !editorTabMovesFocus"
+    },
+    {
+        // Shift+Tab decreases the indentation level.
+        "key": "shift+tab",
+        "command": "outdent",
+        "when": "editorTextFocus && !editorTabMovesFocus"
+    },
+
+
+
+    // ============================
+    // TERMINAL
+    // ============================
+
+    {
+        // Move focus to the next terminal.
+        "key": "ctrl+shift+a",
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
+    },
+    {
+        // Move focus to the previous terminal.
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
+    },
+    {
+        // Show or hide the bottom panel
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.togglePanel"
+    },
+    {
+        // Create a new terminal.
+        // Only works if the terminal currently has focus.
+        "key": "ctrl+shift+n",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
+    },
+    {
+        // Kill the currently focused terminal.
+        "key": "ctrl+shift+w",
+        "command": "workbench.action.terminal.kill",
+        "when": "terminalFocus"
+    },
+
+
+
+    // ============================
+    // FILE EXPLORER
+    // ============================
+
+    {
+        // Toggle the Explorer sidebar.
+        // If the sidebar is hidden, show it.
+        // If it is visible, hide it.
+        "command": "workbench.action.toggleSidebarVisibility",
+        "key": "ctrl+e",
+        "when": "!editorTextFocus"
+    },
+    {
+        // If the editor has focus, Ctrl+E moves keyboard focus
+        // directly into the Explorer instead of toggling it.
+        "command": "workbench.files.action.focusFilesExplorer",
+        "key": "ctrl+e",
+        "when": "editorTextFocus"
+    },
+    {
+        // Create a new file inside the selected folder.
+        "key": "n",
+        "command": "explorer.newFile",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        // Rename the selected file/folder.
+        "command": "renameFile",
+        "key": "r",
+        "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+        // Create a new folder.
+        // Only works when the Explorer is focused.
+        "key": "shift+n",
+        "command": "explorer.newFolder",
+        "when": "explorerViewletFocus"
+    },
+    {
+        // Everywhere except the Explorer,
+        // Shift+N opens a brand new VS Code window.
+        "key": "shift+n",
+        "command": "workbench.action.newWindow",
+        "when": "!explorerViewletFocus"
+    },
+    {
+        // Delete the selected file/folder.
+        "command": "deleteFile",
+        "key": "d",
+        "when": "filesExplorerFocus && !inputFocus"
+    }
+]
