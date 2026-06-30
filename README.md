@@ -13,7 +13,8 @@ A collection of configuration files (dotfiles) to customize and automate the set
 ├── fastfetch/          # Custom fastfetch system info configurations
 │   └── config.jsonc    # System information layout configurations
 ├── ghostty/            # Ghostty terminal settings
-│   └── config          # Terminal font, style, and window config
+│   ├── config          # Terminal font, style, and window config
+│   └── shaders/        # Custom GLSL shaders (e.g. cursor smear)
 ├── nvim/               # Complete LazyVim setup
 │   ├── init.lua        # Neovim entry point
 │   ├── lazyvim.json    # Installed extras/plugins configuration
