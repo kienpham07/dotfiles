@@ -1,0 +1,3 @@
+theme = GitLab Dark Grey
+background-opacity = 0.95
+custom-shader = shaders/cursor_smear.glsl
