@@ -4,7 +4,7 @@
   "editor.minimap.enabled": false,
   "workbench.activityBar.location": "bottom",
   "vscode_custom_css.imports": [
-    "file:///home/kienpham07/custom-vscode.css"
+    "file:///home/kienpham07/.config/Code/User/custom-vscode.css",
   ],
   "gitlens.ai.model": "vscode",
   "gitlens.ai.vscode.model": "copilot:gpt-4.1",
@@ -89,19 +89,19 @@
   "editor.fontSize": 13,
   "window.zoomLevel": 0.5,
   "flow-icons.licenseKey": "FLOW-ENQI89-2BPK0E-5RYF7S-O0PNQR",
-  "workbench.colorTheme": "Dark Modern",
   "editor.stickyScroll.enabled": false,
 
   // VIM MODE
   "keyboard.dispatch": "keyCode",
   "editor.lineNumbers": "relative",
   "vim.leader": "<Space>",
-  "vim.normalModeKeyBindingsNonRecursive": [
-    // Unlock normal mode
+  "vim.insertModeKeyBindings": [ // Unlock normal mode
     {
       "before": ["k", "j"],
       "after": ["<Esc>", "l"]
-    },
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
     // NAVIGATION
     // switch b/w buffers
     { "before": ["<S-h>"], "commands": [":bprevious"] },
@@ -144,5 +144,8 @@
     }
   
   ],
-  "workbench.statusBar.visible": false
+  "workbench.statusBar.visible": false,
+  "workbench.colorTheme": "Dark Modern",
+  "workbench.secondarySideBar.defaultVisibility": "visible",
+  "workbench.tree.renderIndentGuides": "none"
 }
