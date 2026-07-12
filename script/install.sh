@@ -128,9 +128,35 @@ main() {
         symlink_path "vscode/settings.json" "$vscode_target/settings.json"
         symlink_path "vscode/keybindings.json" "$vscode_target/keybindings.json"
         symlink_path "vscode/custom-vscode.css" "$vscode_target/custom-vscode.css"
+        if [ -d "$DOTFILES_DIR/vscode/snippets" ]; then
+            symlink_path "vscode/snippets" "$vscode_target/snippets"
+        fi
     else
         warn "Could not determine VS Code settings path (unsupported OS: $(uname))"
     fi
+
+    # 8. Yazi config
+    info "Setting up Yazi configurations..."
+    symlink_path "yazi" "$HOME/.config/yazi"
+
+    # 9. Niri & Noctalia config
+    info "Setting up Niri and Noctalia configurations..."
+    symlink_path "niri" "$HOME/.config/niri"
+    symlink_path "noctalia" "$HOME/.config/noctalia"
+
+    # 10. Kuro splash screen config
+    info "Setting up Kuro splash screen configuration..."
+    symlink_path "kuro/a2n.kuro" "$HOME/.local/share/plasma/look-and-feel/a2n.kuro"
+
+    # 11. Portal File Picker config
+    info "Setting up Portal File Picker configurations..."
+    symlink_path "xdg-desktop-portal/portals.conf" "$HOME/.config/xdg-desktop-portal/portals.conf"
+    symlink_path "xdg-desktop-portal-termfilechooser" "$HOME/.config/xdg-desktop-portal-termfilechooser"
+
+    # 12. Zoom config
+    info "Setting up Zoom configurations..."
+    symlink_path "zoom/zoom.conf" "$HOME/.config/zoom.conf"
+    symlink_path "zoom/zoomus.conf" "$HOME/.config/zoomus.conf"
 
     success "Symlinking complete!"
     if [ -d "$BACKUP_DIR" ]; then

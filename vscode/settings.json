@@ -144,7 +144,6 @@
     }
   
   ],
-  "workbench.statusBar.visible": false,
   "workbench.colorTheme": "Dark Modern",
   "workbench.secondarySideBar.defaultVisibility": "visible",
   "workbench.tree.renderIndentGuides": "none"

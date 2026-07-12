@@ -15,21 +15,42 @@ A collection of configuration files (dotfiles) to customize and automate the set
 ├── ghostty/            # Ghostty terminal settings
 │   ├── config          # Terminal font, style, and window config
 │   └── shaders/        # Custom GLSL shaders (e.g. cursor smear)
+├── kuro/               # Kuro splash screen settings
+│   └── a2n.kuro/       # Look-and-feel package for custom splash screen
+├── niri/               # Niri window manager configurations
+│   ├── config.kdl      # Window layouts, keybindings, and startup apps
+│   └── noctalia.kdl    # Niri-specific settings for Noctalia
+├── noctalia/           # Noctalia widget and panel settings
+│   ├── settings.json   # Layout, widgets, and panel configurations
+│   └── plugins/        # Installed plugins (clipper, catwalk, etc.)
 ├── nvim/               # Complete LazyVim setup
 │   ├── init.lua        # Neovim entry point
 │   ├── lazyvim.json    # Installed extras/plugins configuration
 │   └── lua/            # Custom keymaps, options, and plugin settings
 ├── script/             # Installation and environment set up scripts
 │   ├── bootstrap.sh    # Distro-agnostic package & dependency installer
-│   └── install.sh      # Safe symlink setup script with automatic backups
+│   ├── install.sh      # Safe symlink setup script with automatic backups
+│   └── sync_from_system.sh # Copies settings from local system back to repository
 ├── tmux/               # Tmux terminal multiplexer settings
 │   └── .tmux.conf      # Prefix shortcuts, plugins, and styling
 ├── vscode/             # VS Code preferences & keybindings
 │   ├── settings.json   # VS Code configuration preferences
 │   ├── keybindings.json# Key mapping adjustments
 │   └── custom-vscode.css# Styling customizations
+├── xdg-desktop-portal/ # Portal picker configuration
+│   └── portals.conf    # Maps default portal handlers (termfilechooser)
+├── xdg-desktop-portal-termfilechooser/ # Terminal file chooser settings
+│   ├── config          # Window style, wrapper script and terminal cmd
+│   └── yazi-wrapper.sh # Integrates yazi with termfilechooser
+├── yazi/               # Yazi file manager configurations
+│   ├── yazi.toml       # General behaviors and mime openers
+│   ├── keymap.toml     # File manager navigation shortcuts
+│   └── theme.toml      # Custom icons and colors
 ├── zed/                # Zed editor configuration
 │   └── settings.json   # Font size, icons, themes, and formatter configs
+├── zoom/               # Zoom configurations
+│   ├── zoom.conf       # Zoom initialization settings
+│   └── zoomus.conf     # Zoom meeting, audio, and UI behavior
 └── zsh/                # Shell customization configurations
     ├── .zshrc          # Primary shell startup configurations and aliases
     └── .p10k.zsh       # Powerlevel10k theme prompt configurations

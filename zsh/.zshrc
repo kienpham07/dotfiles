@@ -126,6 +126,15 @@ fcd() {
 }
 export PATH="$HOME/.local/bin:$PATH"
 
+# Yazi setup 
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	command rm -f -- "$tmp"
+}
+
 # leetcode-readme() function
 leetcode-readme() {
   curl 'https://leetcode.com/graphql' \
@@ -142,3 +151,13 @@ leetcode-readme() {
   $q.content
   ' > README.md
 }
+
+# opencode
+export PATH=/home/kienpham07/.opencode/bin:$PATH
+
+# spicetify
+export PATH=$PATH:/home/kienpham07/.spicetify
+
+# Set editor
+export EDITOR=nvim
+export VISUAL=nvim
