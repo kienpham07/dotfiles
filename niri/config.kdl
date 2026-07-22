@@ -702,6 +702,10 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+    // Shortcut for taking screenshots
+    Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | tee \"$HOME/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png\" | wl-copy"; }
+
 }
 
 include "./noctalia.kdl"
