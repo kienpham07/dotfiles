@@ -426,7 +426,7 @@ binds {
     }
 
     // Custom App Shortcuts
-    Mod+B { spawn "vivaldi" ; }
+    Mod+B { spawn "firefox" ; }
     Mod+E { spawn "dolphin" ; }
 
     // Keys consist of modifiers separated by + signs, followed by an XKB key name
