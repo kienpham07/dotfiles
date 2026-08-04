@@ -1,6 +1,6 @@
 # kienpham07's Dotfiles
 
-A collection of configuration files (dotfiles) to customize and automate the setup of Zsh, Tmux, Neovim (LazyVim), VS Code, Zed Editor, Ghostty, and Fastfetch. It includes a cross-platform bootstrap script that automatically configures Linux distros (Ubuntu, Debian, Fedora, Arch) and macOS.
+A collection of configuration files (dotfiles) to customize and automate the setup of Zsh, Tmux, Neovim (LazyVim), Vivaldi CSS Mod, VS Code, Zed Editor, Ghostty, and Fastfetch. It includes a cross-platform bootstrap script that automatically configures Linux distros (Ubuntu, Debian, Fedora, Arch) and macOS.
 
 ---
 
@@ -55,6 +55,12 @@ A collection of configuration files (dotfiles) to customize and automate the set
     ├── .zshrc          # Primary shell startup configurations and aliases
     └── .p10k.zsh       # Powerlevel10k theme prompt configurations
 ```
+
+---
+
+## Video showcase for Niri setup
+
+<video src="./FedoraNiri_showcase.mp4" width="100%" controls></video>
 
 ---
 
