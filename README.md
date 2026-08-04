@@ -60,7 +60,7 @@ A collection of configuration files (dotfiles) to customize and automate the set
 
 ## Video showcase for Niri setup
 
-<video src="FedoraNiri_showcase.mp4" controls width="100%"></video>
+<video src="FedoraNiri-showcase-compressed.mp4" controls width="100%"></video>
 
 ---
 
