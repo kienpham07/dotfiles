@@ -95,7 +95,7 @@ input {
 }
 
 //Support laptop screen and monitor
-output "eDP-1" { // Inspiron 7306 2-in-1
+output "eDP-1" { // Dell Inspiron 7306 2-in-1
     mode "3840x2160@60.000"
     scale 2.2
     transform "normal"
@@ -703,6 +703,7 @@ binds {
     Mod+Shift+R { switch-preset-window-height; }
     Mod+Ctrl+R { reset-window-height; }
     Mod+F { maximize-column; }
+    Mod+M { maximize-window-to-edges; }
     Mod+Shift+F { fullscreen-window; }
 
     // Expand the focused column to space not taken up by other fully visible columns.
@@ -770,7 +771,6 @@ binds {
 
     // Shortcut for taking screenshots
     Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | tee \"$HOME/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png\" | wl-copy"; }
-
 }
 
 include "./noctalia.kdl"
