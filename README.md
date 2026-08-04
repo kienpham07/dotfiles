@@ -1,6 +1,6 @@
 # kienpham07's Dotfiles
 
-A collection of configuration files (dotfiles) to customize and automate the setup of Zsh, Tmux, Neovim (LazyVim), Vivaldi CSS Mod, VS Code, Zed Editor, Ghostty, and Fastfetch. It includes a cross-platform bootstrap script that automatically configures Linux distros (Ubuntu, Debian, Fedora, Arch) and macOS.
+A collection of configuration files (dotfiles) to customize and automate the setup of Zsh, Tmux, Neovim (LazyVim), Niri Window Manager, Noctalia Shell, Yazi, Vivaldi CSS Mod, VS Code, Zed Editor, Ghostty, Fastfetch, and more. It includes a cross-platform bootstrap script that automatically configures Linux distros (Ubuntu, Debian, Fedora, Arch) and macOS.
 
 ---
 
@@ -10,8 +10,10 @@ A collection of configuration files (dotfiles) to customize and automate the set
 .
 ├── LICENSE             # MIT License
 ├── README.md           # This documentation file
+├── FedoraNiri-showcase-compressed.mp4 # Video showcase for Niri setup
 ├── fastfetch/          # Custom fastfetch system info configurations
-│   └── config.jsonc    # System information layout configurations
+│   ├── config.jsonc    # System information layout configurations
+│   └── logo.txt        # Custom Fastfetch ASCII logo
 ├── ghostty/            # Ghostty terminal settings
 │   ├── config          # Terminal font, style, and window config
 │   └── shaders/        # Custom GLSL shaders (e.g. cursor smear)
@@ -19,10 +21,11 @@ A collection of configuration files (dotfiles) to customize and automate the set
 │   └── a2n.kuro/       # Look-and-feel package for custom splash screen
 ├── niri/               # Niri window manager configurations
 │   ├── config.kdl      # Window layouts, keybindings, and startup apps
-│   └── noctalia.kdl    # Niri-specific settings for Noctalia
+│   ├── noctalia.kdl    # Niri-specific settings for Noctalia
+│   └── shaders/        # GLSL window animation shaders (e.g. inkwell drop)
 ├── noctalia/           # Noctalia widget and panel settings
 │   ├── settings.json   # Layout, widgets, and panel configurations
-│   └── plugins/        # Installed plugins (clipper, catwalk, etc.)
+│   └── plugins/        # Installed plugins (catwalk, clipper, model-usage, pomodoro, sticky-notes, usb-drive-manager)
 ├── nvim/               # Complete LazyVim setup
 │   ├── init.lua        # Neovim entry point
 │   ├── lazyvim.json    # Installed extras/plugins configuration
@@ -33,10 +36,13 @@ A collection of configuration files (dotfiles) to customize and automate the set
 │   └── sync_from_system.sh # Copies settings from local system back to repository
 ├── tmux/               # Tmux terminal multiplexer settings
 │   └── .tmux.conf      # Prefix shortcuts, plugins, and styling
+├── vivaldi-mods/       # Vivaldi browser customizations
+│   └── customVivaldi.css # Custom CSS interface modifications
 ├── vscode/             # VS Code preferences & keybindings
 │   ├── settings.json   # VS Code configuration preferences
 │   ├── keybindings.json# Key mapping adjustments
-│   └── custom-vscode.css# Styling customizations
+│   ├── custom-vscode.css# Styling customizations
+│   └── snippets/       # Custom code snippets
 ├── xdg-desktop-portal/ # Portal picker configuration
 │   └── portals.conf    # Maps default portal handlers (termfilechooser)
 ├── xdg-desktop-portal-termfilechooser/ # Terminal file chooser settings
@@ -45,7 +51,8 @@ A collection of configuration files (dotfiles) to customize and automate the set
 ├── yazi/               # Yazi file manager configurations
 │   ├── yazi.toml       # General behaviors and mime openers
 │   ├── keymap.toml     # File manager navigation shortcuts
-│   └── theme.toml      # Custom icons and colors
+│   ├── theme.toml      # Custom icons and colors
+│   └── flavors/        # Yazi UI theme flavors (noctalia.yazi)
 ├── zed/                # Zed editor configuration
 │   └── settings.json   # Font size, icons, themes, and formatter configs
 ├── zoom/               # Zoom configurations
@@ -66,7 +73,7 @@ https://github.com/user-attachments/assets/a9242492-98f3-4611-8a80-7c7b6988dce7
 
 ---
 
-## Installation
+## Installation & Management
 
 ### Option 1: Full System Bootstrap (Recommended for new setups)
 Run the bootstrap script. It will automatically detect your OS, install system dependencies, download shell plugins (Oh My Zsh, Powerlevel10k, syntax highlighting, autosuggestions), install Tmux Plugin Manager, change your default shell to Zsh, and create all symlinks.
@@ -84,6 +91,13 @@ If you already have Zsh, Neovim, and other packages installed and only want to a
 
 > [!IMPORTANT]
 > **Safety Backups:** If a configuration file (like `~/.zshrc`) already exists, `install.sh` will move it to a backup directory `~/.dotfiles_backup/YYYYMMDD_HHMMSS/` before creating a symlink. Your original configurations are never lost.
+
+### Option 3: Sync Local Settings Back to Repository
+If you make updates to your configurations locally on your system, copy them back into the repository before committing:
+
+```bash
+./script/sync_from_system.sh
+```
 
 ---
 
