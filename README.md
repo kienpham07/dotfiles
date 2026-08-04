@@ -62,6 +62,8 @@ A collection of configuration files (dotfiles) to customize and automate the set
 
 <video src="FedoraNiri-showcase-compressed.mp4" controls width="100%"></video>
 
+https://github.com/user-attachments/assets/bb112416-a79c-4cd2-b6aa-53e58104eebe
+
 ---
 
 ## Installation
