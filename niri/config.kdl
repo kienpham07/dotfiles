@@ -1,27 +1,17 @@
-// Set the overview wallpaper on the backdrop.
+// Set the wallpaper on the overview tab (Mod + Space).
 layer-rule {
   match namespace="^noctalia-overview*"
   place-within-backdrop true
-
-}
-
-// Noctalia: blur launcher-overlay + dock, no xray, for a nicer look
-layer-rule {
-  match namespace="^noctalia-(launcher-overlay|dock)-.*$"
-  background-effect {
-    xray false
-  }
 }
 
 // Fully disable blur on Noctalia's shared background surface
-// (this is what renders behind the bar, and also the panel dimmer)
+// (this is what renders behind the bar, and also the make the bar panel dimmer)
 layer-rule {
   match namespace="^noctalia-background-.*$"
   background-effect {
     blur false
   }
 }
-
 
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
