@@ -1,3 +1,4 @@
 theme = noctalia
-background-opacity = 0.95
+background-opacity = 0.85
 custom-shader = shaders/cursor_smear.glsl
+scrollbar = system
