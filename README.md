@@ -73,4 +73,4 @@ https://github.com/user-attachments/assets/a9242492-98f3-4611-8a80-7c7b6988dce7
 
 ## License
 
-This project is licensed under the [MIT License](file:///home/kienpham07/Downloads/Disk%20D%20Window/dotfiles/LICENSE).
+This project is licensed under the [MIT License].
