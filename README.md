@@ -1,6 +1,8 @@
 # kienpham07's Dotfiles
 
-A collection of configuration files (dotfiles) to customize and automate the setup of Zsh, Tmux, Neovim (LazyVim), Niri Window Manager, Noctalia Shell, Yazi, Vivaldi CSS Mod, VS Code, Zed Editor, Ghostty, Fastfetch, and more. It includes a cross-platform bootstrap script that automatically configures Linux distros (Ubuntu, Debian, Fedora, Arch) and macOS.
+A collection of configuration files (dotfiles) to customize and automate the setup of Zsh, Tmux, Neovim (LazyVim), Niri Window Manager, Noctalia Shell, Yazi, Vivaldi CSS Mod, VS Code, Zed Editor, Ghostty, Fastfetch, and more.
+
+If you find this repository helpful, I’d appreciate it if you could give it a star! ⭐
 
 ---
 
@@ -30,10 +32,6 @@ A collection of configuration files (dotfiles) to customize and automate the set
 │   ├── init.lua        # Neovim entry point
 │   ├── lazyvim.json    # Installed extras/plugins configuration
 │   └── lua/            # Custom keymaps, options, and plugin settings
-├── script/             # Installation and environment set up scripts
-│   ├── bootstrap.sh    # Distro-agnostic package & dependency installer
-│   ├── install.sh      # Safe symlink setup script with automatic backups
-│   └── sync_from_system.sh # Copies settings from local system back to repository
 ├── tmux/               # Tmux terminal multiplexer settings
 │   └── .tmux.conf      # Prefix shortcuts, plugins, and styling
 ├── vivaldi-mods/       # Vivaldi browser customizations
@@ -70,49 +68,6 @@ A collection of configuration files (dotfiles) to customize and automate the set
 <video src="FedoraNiri-showcase-compressed.mp4" controls width="100%"></video>
 
 https://github.com/user-attachments/assets/a9242492-98f3-4611-8a80-7c7b6988dce7
-
----
-
-## Installation & Management
-
-### Option 1: Full System Bootstrap (Recommended for new setups)
-Run the bootstrap script. It will automatically detect your OS, install system dependencies, download shell plugins (Oh My Zsh, Powerlevel10k, syntax highlighting, autosuggestions), install Tmux Plugin Manager, change your default shell to Zsh, and create all symlinks.
-
-```bash
-./script/bootstrap.sh
-```
-
-### Option 2: Symlinks Only (If dependencies are already installed)
-If you already have Zsh, Neovim, and other packages installed and only want to apply the configuration links:
-
-```bash
-./script/install.sh
-```
-
-> [!IMPORTANT]
-> **Safety Backups:** If a configuration file (like `~/.zshrc`) already exists, `install.sh` will move it to a backup directory `~/.dotfiles_backup/YYYYMMDD_HHMMSS/` before creating a symlink. Your original configurations are never lost.
-
-### Option 3: Sync Local Settings Back to Repository
-If you make updates to your configurations locally on your system, copy them back into the repository before committing:
-
-```bash
-./script/sync_from_system.sh
-```
-
----
-
-## Post-Install Steps
-
-To finish setting up all features:
-
-1. **Restart your Shell / Terminal:**
-   Log out and log back in, or launch a new terminal window to apply the switch to Zsh.
-
-2. **Load Tmux Plugins:**
-   Start Tmux by running `tmux`. Press `Ctrl + s` followed by `I` (capital `i`) to trigger Tmux Plugin Manager (TPM) to install configured plugins.
-
-3. **Initialize Neovim Plugins:**
-   Open Neovim by running `nvim`. LazyVim will automatically launch and fetch all configured language servers (LSP), diagnostics tools, and formatting libraries.
 
 ---
 
