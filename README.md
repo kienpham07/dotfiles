@@ -6,6 +6,14 @@ If you find this repository helpful, I’d appreciate it if you could give it a 
 
 ---
 
+## Video showcase for Niri setup
+
+<video src="FedoraNiri-showcase-compressed.mp4" controls width="100%"></video>
+
+https://github.com/user-attachments/assets/a9242492-98f3-4611-8a80-7c7b6988dce7
+
+---
+
 ## Project Structure
 
 ```text
@@ -60,14 +68,6 @@ If you find this repository helpful, I’d appreciate it if you could give it a 
     ├── .zshrc          # Primary shell startup configurations and aliases
     └── .p10k.zsh       # Powerlevel10k theme prompt configurations
 ```
-
----
-
-## Video showcase for Niri setup
-
-<video src="FedoraNiri-showcase-compressed.mp4" controls width="100%"></video>
-
-https://github.com/user-attachments/assets/a9242492-98f3-4611-8a80-7c7b6988dce7
 
 ---
 
