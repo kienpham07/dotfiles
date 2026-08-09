@@ -761,9 +761,6 @@ binds {
 
     // Shortcut for taking screenshots
     Mod+Shift+S { spawn-sh "grim -g \"$(slurp)\" - | tee \"$HOME/Pictures/Screenshots/Screenshot_$(date +'%Y-%m-%d_%H-%M-%S').png\" | wl-copy"; }
-
-    // Enable Wallpaper carousel (https://github.com/motor-dev/wallpaperCarousel)
-    Mod+Shift+W { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "wallpaperCarousel" "toggle"; }
 }
 
 include "./noctalia.kdl"
